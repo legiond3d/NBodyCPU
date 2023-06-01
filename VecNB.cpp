@@ -100,7 +100,7 @@ void VecNB<T>::setV(const T& x, const T& y, const T& z)
 }
 
 template<class T>
-void VecNB<T>::setR(const Vec3D<T>& v)
+void VecNB<T>::setV(const Vec3D<T>& v)
 {
 	this->v = v;
 }

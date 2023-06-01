@@ -28,7 +28,7 @@ public:
 	void setR(const T& x, const T& y, const T& z);
 	void setR(const Vec3D<T>& r);
 	void setV(const T& x, const T& y, const T& z);
-	void setR(const Vec3D<T>& v);
+	void setV(const Vec3D<T>& v);
 	void setM(const T& m);
 };
 

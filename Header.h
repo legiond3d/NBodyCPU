@@ -10,8 +10,11 @@
 #include<ctime>
 using namespace std;
 
-#define pi 3.1415926535897
+#define PI 3.1415926535897
 #define G 1.0 //6.67259e-11 
-#define sigma 0.001 //1e-8 
+#define SIGMA 0.001 //1e-8
+#define THETA 0.5
+
+typedef double real;
 
 #endif

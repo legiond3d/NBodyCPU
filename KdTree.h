@@ -1,7 +1,6 @@
 #ifndef __KD_TREE_HEADER__
 #define __KD_TREE_HEADER__
 
-#include"Header.h"
 #include"TreeNode.h"
 
 template<class T>
@@ -9,11 +8,18 @@ class KdTree
 {
 private:
 	TreeNode<T>* treeNodes;
-	size_t N;
+	int N;
+	int minDepthLvl;
+	int maxDepthLvl;
 public:
-	void KdTree();
-	void KdTree(T* array, size_t N);
-	void ~KdTree();
+	KdTree(const int& N, const int& minDepthLvl, const int& maxDepthLvl);
+	KdTree(const VecNB<T>* array, const int& N, const int& minDepthLvl, const int& maxDepthLvl);
+	~KdTree();
+
+	int getSizeTree();
+	int getN();
+	int getMinDepthLvl();
+	int getMaxDepthLvl();
 };
 
 #endif

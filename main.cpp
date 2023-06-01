@@ -2,6 +2,7 @@
 #define __MAIN__
 
 #include"Header.h"
+#include"KdTree.h"
 
 int main()
 {
