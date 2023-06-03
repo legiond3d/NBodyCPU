@@ -30,6 +30,10 @@ public:
 	void setV(const T& x, const T& y, const T& z);
 	void setV(const Vec3D<T>& v);
 	void setM(const T& m);
+
+	bool lesserEqualRX(const VecNB<T>& vec);
+	bool lesserEqualRY(const VecNB<T>& vec);
+	bool lesserEqualRZ(const VecNB<T>& vec);
 };
 
 #endif

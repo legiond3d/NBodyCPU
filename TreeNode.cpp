@@ -72,10 +72,38 @@ Vec3D<T> TreeNode<T>::getMassCentre()
 }
 
 template<class T>
+TreeNode<T>& TreeNode<T>::operator=(const TreeNode<T>& node)
+{
+	if (this != &node)
+	{
+		this->mass = node.mass;
+		this->massCentre = node.massCentre;
+	}
+	return *this;
+}
+
+template<class T>
+TreeNode<T>& TreeNode<T>::operator=(const T& scalar)
+{
+	this->mass = scalar;
+	this->massCentre = scalar;
+	return *this;
+}
+
+template<class T>
+TreeNode<T> TreeNode<T>::operator+(const TreeNode<T>& node)
+{
+	TreeNode<T> res;
+	res.mass = this->mass + node.mass;
+	res.massCentre = this->massCentre + node.massCentre;
+	return res;
+}
+
+template<class T>
 void TreeNode<T>::addParticle(const VecNB<T>& particle)
 {
-	this->mass += particle.getM();
-	this->massCentre += particle.getR() * particle.getM();
+	this->mass = particle.getM();
+	this->massCentre = particle.getR() * particle.getM();
 }
 
 template<class T>

@@ -111,4 +111,22 @@ void VecNB<T>::setM(const T& m)
 	this->m = m;
 }
 
+template<class T>
+bool VecNB<T>::lesserEqualRX(const VecNB<T>& vec)
+{
+	return this->r.getX() <= vec.getR().getX();
+}
+
+template<class T>
+bool VecNB<T>::lesserEqualRY(const VecNB<T>& vec)
+{
+	return this->r.getY() <= vec.getR().getY();
+}
+
+template<class T>
+bool VecNB<T>::lesserEqualRZ(const VecNB<T>& vec)
+{
+	return this->r.getZ() <= vec.getR().getZ();
+}
+
 #endif

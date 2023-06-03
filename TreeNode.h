@@ -21,6 +21,10 @@ public:
 	T getMass();
 	Vec3D<T> getMassCentre();
 
+	TreeNode<T>& operator=(const TreeNode<T>& node);
+	TreeNode<T>& operator=(const T& scalar);
+	TreeNode<T> operator+(const TreeNode<T>& node);
+
 	void addParticle(const VecNB<T>& particle);
 	bool checkDistance(const VecNB<T>& particle);
 };
